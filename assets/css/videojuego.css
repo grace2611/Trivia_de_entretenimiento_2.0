@@ -1,13 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
-*{
-    font-family: 'Mochiy Pop One';
-}
-
+ 
 * {
-    transition: all 0.85s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
   }
-
 .container {
     text-align: center;
     padding: 20px;

@@ -1,8 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
-*{
-    font-family: 'Mochiy Pop One';
-}
+@import url('https://fonts.cdnfonts.com/css/caramel-sweets');
+@import url('https://fonts.cdnfonts.com/css/eazy-chat');
+@import url('https://fonts.cdnfonts.com/css/typewriter-condensed');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
 
 body {
     position: relative;
@@ -19,29 +23,94 @@ video {
     z-index: -2;
   }
 
-#trivia-container {
+  #trivia-container {
     text-align: center;
-    padding: 20px;
-    background-color: #e6fffd;
-    border: 10px solid #b9eeea; 
+    background-color: #bcf3f6;
+    border: 10px solid #a6f1f5;
+    box-shadow: 0px 0px 50px rgba(0, 165, 247, 0.589);
     border-radius: 70px;
     margin: 26px 230px 26px;
+    padding: 5vh;
+    transition: transform 0.8s ease; 
+}
+  
+.container:hover {
+    transform: scale(1.03); 
+}
+  
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin: 0;
+    font-size: 8vh;
 }
 
-#nombreUsuario {
-    font-weight: bold;
+.text-1,
+.text-2 {
+  font-family: 'Caramel Sweets';
+  opacity: 0;
+  margin: 0 5px;
+}
+
+.text-1 {
+  background-color: #bcf3f6;
+  color: rgb(16, 90, 155);
+  padding: 5px;
+  z-index: 2;
+}
+
+.text-2 {
+  color: rgb(18, 145, 159);
+}
+
+@keyframes appearAndSlideLeft {
+    0% {
+      transform: translateX(50%) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) scale(1);
+      opacity: 1;
+    }
+  }
+  
+.green {
+    color: rgb(92, 186, 58);
+    -webkit-text-stroke: 1px rgb(61, 61, 61);
+    margin-left: 10px;
+}
+
+.text {
+    margin-top: 50px;
+}
+
+h3 {
+    display: inline;
+}
+
+div h2, div h3 {
+    font-family: 'Typewriter_Condensed_Demi', sans-serif;
+    font-size: 5vh;
+    color: #404040;
 }
 
 .opciones-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .opcion-container {
     text-align: center;
-    margin: 60px 100px 30px 100px;
-    color: #333;
+    margin: 40px;
+    margin-bottom: 5px;
+    color: #272727;
+}
+
+.opcion-container > p {
+    font-family: 'Caramel Sweets';
+    font-size: 5vh;
 }
 
 .boton {
@@ -50,17 +119,16 @@ video {
     overflow: hidden;
     width: 150px;
     height: 150px;
-    box-shadow: 0px 0px 50px rgba(80, 232, 255, 0.589);
+    box-shadow: 0px 0px 50px rgba(2, 221, 255, 0.8);
     cursor: pointer;
-    transition: transform 0.4s ease; 
+    transition: transform 0.8s ease; 
 }
 
 .boton:hover {
-    transform: scale(1.6); 
+    transform: scale(0.9); 
 }
 
 .imagen-logo {
     width: 150px;
     height: auto;
 }
-

@@ -2,43 +2,40 @@
 <html lang="es">
 
 <head>
-     <title>PLAYGAMES</title>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="assets/css/peliculas.css">
-     <meta property="og:site_name" content="Juego de preguntas">
-     <meta property="og:title" content="Juego de preguntas">
-     <meta property="og:description" content="versión 2">
-     <meta property="og:image" content="https://i.ibb.co/3vg4KNb/softyo-001.png">
-     <link rel="icon" type="image/png" href="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gaming-video-logo-design-template-4548b4c8cb14b480b4ccc062314e0889_screen.jpg?ts=1634988268">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Entretenimiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/peliculas.css">
+    <link rel="icon" type="image/png" href="assets/img/logo_principal.png">
 </head>
 
-<body>
-    <div id="tablero-de-juego">
-        <div id="encabezado">
-                <span id="pregunta">¿CUÁL ES LA PELICULA?</span>
-            </br>
-             <img id="imagen" src="css/imagenes/dumbo.png" style="width: 900px; height: 200px;object-fit: contain;">
-        </div>
+<body class="d-flex flex-column h-100">
+  <div class="text-center mb-4">
+      <h1 id="pregunta">¿CUÁL ES LA PELICULA?</h1>
+  </div>
 
-        <div class="opcion" id="op1">
-             Opción 1
-        </div>
-        <div class="opcion" id="op2">
-             Opción 2
-        </div>
-        <div class="opcion" id="op3">
-             Opción 3
-        </div>
-        <div class="opcion" id="op4">
-             Opción 4
-        </div>
+  <div id="tablero-de-juego" class="d-flex flex-row align-items-center justify-content-center">
+      <div class="flex-grow-1">
+          <img id="imagen" src="assets/img/dumbo.png" class="img-fluid" alt="Pelicula Imagen">
+      </div>
+      <div class="flex-grow-1">
+        <div class="opciones d-flex flex-column">
+          <div class="opcion my-2" id="op1">Opción 1</div>
+          <div class="opcion my-2" id="op2">Opción 2</div>
+          <div class="opcion my-2" id="op3">Opción 3</div>
+          <div class="opcion my-2" id="op4">Opción 4</div>
+        </div>      
+      </div>
+  </div>
 
-   </div>
-   <div class="avance"> 
-     <progress id="barra-progreso" max="100" value="70">70%</progress>
-   </div>
-     <script src="assets/js/peliculas.js"></script>
+  <div class="avance text-center mt-3">
+      <progress id="barra-progreso" max="100" value="70">70%</progress>
+  </div>
+
+  <script src="assets/js/peliculas.js"></script>
 </body>
+
 </html>
